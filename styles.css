@@ -146,6 +146,7 @@ a[href="#quote"][style*="background: #3BB4F2"] {
 
   /* Hide secondary nav links; keep phone + CTA */
   header nav a[href="#services"],
+  header nav a[href="#evaluation"],
   header nav a[href="#process"],
   header nav a[href="#faq"] { display: none; }
   header nav { padding-top: 12px !important; padding-bottom: 12px !important; }

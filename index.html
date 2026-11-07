@@ -226,11 +226,14 @@
       <div style="grid-column: span 8; display: flex; flex-direction: column; gap: 10px; min-width: 0">
         <p style="margin: 0; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #2A6B8F; font-weight: 600">In-person cleaning evaluation</p>
         <h3 style="margin: 0; font-family: 'Space Grotesk', Inter, sans-serif; font-weight: 700; font-size: 30px; line-height: 1.15">Hands-on assessment, clear plan, firm quote.</h3>
-        <p style="margin: 0; color: #334A62">Owner-led, on-site, about 30 minutes per simulator, with time for your team's questions. Multiple units are evaluated separately, each with its own report and quote.</p>
+        <p style="margin: 0; color: #334A62">Owner-led, on-site, anywhere in the U.S., about 30 minutes per simulator, with time for your team's questions. Each unit gets its own condition report and quote.</p>
       </div>
       <div style="grid-column: span 4; display: flex; flex-direction: column; gap: 10px; min-width: 0">
-        <p style="margin: 0; font-family: 'Space Grotesk', Inter, sans-serif; font-weight: 700; font-size: 34px; line-height: 1">$500</p>
-        <p style="margin: 0; font-size: 15px; color: #334A62">Fully credited toward your total when you book the cleaning.</p>
+        <div style="display: flex; flex-direction: column; gap: 6px">
+          <p style="margin: 0; display: flex; align-items: baseline; gap: 10px"><span style="font-family: 'Space Grotesk', Inter, sans-serif; font-weight: 700; font-size: 34px; line-height: 1">$500</span><span style="font-size: 15px; color: #334A62">first simulator, travel included</span></p>
+          <p style="margin: 0; display: flex; align-items: baseline; gap: 10px"><span style="font-family: 'Space Grotesk', Inter, sans-serif; font-weight: 700; font-size: 24px; line-height: 1">+ $150</span><span style="font-size: 15px; color: #334A62">each additional unit, same visit</span></p>
+        </div>
+        <p style="margin: 0; font-size: 15px; color: #334A62">The full evaluation fee is credited toward your cleaning when you book within 60 days.</p>
         <a href="#quote" style="background: #0B1726; color: #F2F6FA; text-decoration: none; font-weight: 600; padding: 13px 22px; border-radius: 8px; text-align: center; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center">Book an evaluation</a>
       </div>
     </div>
@@ -323,6 +326,10 @@
           <p style="margin: 12px 0 0; color: #C9D5E1">An in-person evaluation takes about 30 minutes per device. Cleaning time depends on the simulator's size and model, and on the number and size of its mirrors, so it's quoted per device. Either way, work is scheduled around your training blocks.</p>
         </details>
         <details style="background: #122238; border: 1px solid #1E3148; border-radius: 12px; padding: 18px 22px">
+          <summary style="cursor: pointer; font-weight: 600; font-size: 18px; min-height: 44px; display: flex; align-items: center">How does evaluation pricing work for multiple simulators?</summary>
+          <p style="margin: 12px 0 0; color: #C9D5E1">The first simulator is $500, which covers travel to your site anywhere in the U.S. Each additional unit evaluated on the same visit is $150. A four-sim center pays $950, not $2,000. The whole fee is credited toward your cleaning when you book within 60 days.</p>
+        </details>
+        <details style="background: #122238; border: 1px solid #1E3148; border-radius: 12px; padding: 18px 22px">
           <summary style="cursor: pointer; font-weight: 600; font-size: 18px; min-height: 44px; display: flex; align-items: center">Do you clean other optics?</summary>
           <p style="margin: 12px 0 0; color: #C9D5E1">Yes. Beyond first surface mirrors, Clear Sky cleans beam splitter and combiner glass, back and front projection screens and chin window fold mirrors, and handles moth remediation inside visual-system enclosures.</p>
         </details>
@@ -369,7 +376,7 @@
             <label style="display: flex; gap: 10px; align-items: center; background: #FFFFFF; border: 1px solid #C9D5E1; border-radius: 8px; padding: 10px 12px; min-height: 44px; box-sizing: border-box; font-size: 15px"><input type="checkbox" name="services" value="Chin window fold mirror" style="width: 18px; height: 18px">Chin window fold mirror</label>
             <label style="display: flex; gap: 10px; align-items: center; background: #FFFFFF; border: 1px solid #C9D5E1; border-radius: 8px; padding: 10px 12px; min-height: 44px; box-sizing: border-box; font-size: 15px"><input type="checkbox" name="services" value="Beam splitter glass" style="width: 18px; height: 18px">Beam splitter glass</label>
           </div>
-          <label style="display: flex; gap: 10px; align-items: flex-start; background: #E3EEF7; border: 1px solid #9CC9E6; border-radius: 8px; padding: 12px; box-sizing: border-box; font-size: 15px"><input type="checkbox" name="services" value="In-person evaluation ($500, credited)" style="width: 18px; height: 18px; margin-top: 2px"><span><strong style="font-weight: 600">In-person cleaning evaluation</strong> <span style="color: #334A62">($500, fully credited toward the cleaning)</span></span></label>
+          <label style="display: flex; gap: 10px; align-items: flex-start; background: #E3EEF7; border: 1px solid #9CC9E6; border-radius: 8px; padding: 12px; box-sizing: border-box; font-size: 15px"><input type="checkbox" name="services" value="In-person evaluation ($500 first unit + $150 each additional, credited)" style="width: 18px; height: 18px; margin-top: 2px"><span><strong style="font-weight: 600">In-person cleaning evaluation</strong> <span style="color: #334A62">($500 first simulator, $150 each additional unit, fully credited toward the cleaning)</span></span></label>
         </fieldset>
 
         <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px">
@@ -378,7 +385,8 @@
           <label style="display: flex; flex-direction: column; gap: 6px; font-weight: 600; font-size: 15px">Email *<input type="email" name="email" required autocomplete="email" style="border: 1px solid #C9D5E1; border-radius: 8px; padding: 12px; min-height: 44px; box-sizing: border-box; font-weight: 400; background: #FFFFFF; color: #0B1726"></label>
           <label style="display: flex; flex-direction: column; gap: 6px; font-weight: 600; font-size: 15px">Phone<input type="tel" name="phone" autocomplete="tel" style="border: 1px solid #C9D5E1; border-radius: 8px; padding: 12px; min-height: 44px; box-sizing: border-box; font-weight: 400; background: #FFFFFF; color: #0B1726"></label>
           <label style="display: flex; flex-direction: column; gap: 6px; font-weight: 600; font-size: 15px">Simulator type<select name="simulator_type" style="border: 1px solid #C9D5E1; border-radius: 8px; padding: 12px; min-height: 44px; box-sizing: border-box; font-weight: 400; background: #FFFFFF; color: #0B1726"><option>Full Flight Simulator (FFS)</option><option>Flight Training Device (FTD)</option><option>Fixed-base / other</option><option>Multiple devices</option></select></label>
-          <label style="display: flex; flex-direction: column; gap: 6px; font-weight: 600; font-size: 15px">Number of mirrors<input type="number" name="mirror_count" min="1" style="border: 1px solid #C9D5E1; border-radius: 8px; padding: 12px; min-height: 44px; box-sizing: border-box; font-weight: 400; background: #FFFFFF; color: #0B1726"></label>
+          <label style="display: flex; flex-direction: column; gap: 6px; font-weight: 600; font-size: 15px">Number of simulators<input type="number" name="unit_count" min="1" value="1" style="border: 1px solid #C9D5E1; border-radius: 8px; padding: 12px; min-height: 44px; box-sizing: border-box; font-weight: 400; background: #FFFFFF; color: #0B1726"></label>
+          <label style="display: flex; flex-direction: column; gap: 6px; font-weight: 600; font-size: 15px">Number of mirrors (total)<input type="number" name="mirror_count" min="1" style="border: 1px solid #C9D5E1; border-radius: 8px; padding: 12px; min-height: 44px; box-sizing: border-box; font-weight: 400; background: #FFFFFF; color: #0B1726"></label>
         </div>
         <label style="display: flex; flex-direction: column; gap: 6px; font-weight: 600; font-size: 15px">Message<textarea name="message" rows="4" placeholder="Device details, timing, location, or anything helpful" style="border: 1px solid #C9D5E1; border-radius: 8px; padding: 12px; box-sizing: border-box; font-weight: 400; resize: vertical; background: #FFFFFF; color: #0B1726"></textarea></label>
         <button type="submit" style="background: #0B1726; color: #F2F6FA; border: 0; font-weight: 600; font-size: 17px; padding: 15px 24px; border-radius: 8px; min-height: 48px; cursor: pointer">Request a quote →</button>

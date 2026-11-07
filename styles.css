@@ -1,0 +1,81 @@
+/* Clear Sky — site styles
+   Layout and colors live inline in index.html (exported from the design canvas).
+   This file handles the things inline styles can't: base reset, link colors,
+   form fields, focus states, and responsive overrides for phones/tablets. */
+
+html { scroll-behavior: smooth; }
+body { margin: 0; background: #0B1726; }
+a { color: #3BB4F2; }
+a:hover { color: #7FD0F7; }
+input, select, textarea, button { font: inherit; }
+img { max-width: 100%; }
+
+/* Keyboard focus visible on every control */
+a:focus-visible, button:focus-visible, input:focus-visible,
+select:focus-visible, textarea:focus-visible, summary:focus-visible {
+  outline: 3px solid #3BB4F2;
+  outline-offset: 2px;
+}
+
+/* Form fields on the light panel */
+form input:focus, form select:focus, form textarea:focus {
+  border-color: #2A6B8F !important;
+}
+
+/* FAQ disclosure arrow */
+details summary { list-style: none; }
+details summary::-webkit-details-marker { display: none; }
+details summary::after {
+  content: "";
+  margin-left: auto;
+  width: 10px; height: 10px;
+  border-right: 2px solid #3BB4F2;
+  border-bottom: 2px solid #3BB4F2;
+  transform: rotate(45deg);
+  transition: transform .2s;
+  flex-shrink: 0;
+}
+details[open] summary::after { transform: rotate(-135deg); }
+
+/* Button hover */
+a[href="#quote"]:hover, button[type="submit"]:hover { filter: brightness(1.08); }
+
+/* ---------- Tablet ---------- */
+@media (max-width: 1024px) {
+  h1 { font-size: 48px !important; }
+  h2 { font-size: 34px !important; }
+  /* 4-up grids become 2-up */
+  [style*="repeat(4, minmax(0, 1fr))"] { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+  [style*="grid-column: span 3"] { grid-column: span 2 !important; }
+}
+
+/* ---------- Phone ---------- */
+@media (max-width: 760px) {
+  h1 { font-size: 38px !important; }
+  h2 { font-size: 30px !important; }
+  section, header nav, footer { padding-left: 20px !important; padding-right: 20px !important; }
+  section { padding-top: 56px !important; padding-bottom: 56px !important; }
+
+  /* Every grid collapses to one column */
+  [style*="grid-template-columns"] { grid-template-columns: minmax(0, 1fr) !important; }
+  [style*="grid-column"] { grid-column: auto !important; }
+
+  /* Hide secondary nav links; keep phone + CTA */
+  header nav a[href="#services"],
+  header nav a[href="#process"],
+  header nav a[href="#faq"] { display: none; }
+  header nav { padding-top: 12px !important; padding-bottom: 12px !important; }
+
+  /* Light evaluation box and quote panel */
+  [style*="background: #F2F6FA"] { padding: 24px !important; }
+
+  /* Photo grid stays 2-up on phones; the images are small anyway */
+  #experience [style*="grid-template-columns: repeat(2, minmax(0, 1fr))"] {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  details summary::after { transition: none; }
+}

@@ -16,10 +16,10 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div style="width: 100%; min-height: 100vh; box-sizing: border-box; background: linear-gradient(180deg, #0D1B2E 0%, #0B1726 40%, #0A1422 100%); color: #F2F6FA; font-family: Inter, system-ui, sans-serif; font-size: 17px; line-height: 1.55; display: flex; flex-direction: column">
+<div style="width: 100%; min-height: 100vh; box-sizing: border-box; background: linear-gradient(180deg, #0F2036 0%, #0B1726 30%, #0B1726 70%, #081220 100%); color: #F2F6FA; font-family: Inter, system-ui, sans-serif; font-size: 17px; line-height: 1.55; display: flex; flex-direction: column">
 
   <!-- NAV -->
-  <header style="position: sticky; top: 0; z-index: 10; background: rgba(13,27,46,0.92); border-bottom: 1px solid #1E3148">
+  <header class="site-header" style="position: sticky; top: 0; z-index: 10; background: rgba(11,23,38,0.72); border-bottom: 1px solid rgba(59,180,242,0.18)">
     <nav aria-label="Main" style="max-width: 1200px; margin: 0 auto; padding: 16px 32px; box-sizing: border-box; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
       <a href="#top" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: #F2F6FA">
         <svg aria-hidden="true" width="34" height="34" viewBox="0 0 34 34" fill="none" stroke="#3BB4F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 4 L17 30"/><path d="M4 16 L17 11 L30 16"/><path d="M11 27 L17 24 L23 27"/></svg>
@@ -39,20 +39,22 @@
   </header>
 
   <!-- HERO -->
-  <section id="top" style="padding: 96px 32px 72px; box-sizing: border-box">
-    <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 40px; align-items: center">
+  <section id="top" class="hero" style="position: relative; overflow: hidden; padding: 112px 32px 88px; box-sizing: border-box">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div style="position: relative; max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 40px; align-items: center">
       <div style="grid-column: span 7; display: flex; flex-direction: column; gap: 28px; min-width: 0">
         <div style="display: flex; flex-direction: column; gap: 10px">
           <h1 class="wordmark" style="margin: 0; font-family: 'Space Grotesk', Inter, sans-serif; font-weight: 700; font-size: 104px; line-height: 0.95; letter-spacing: 0.04em; text-transform: uppercase; color: #F2F6FA">Clear Sky</h1>
           <p style="margin: 0; font-size: 15px; letter-spacing: 0.18em; text-transform: uppercase; color: #A9B8C9; font-weight: 600">First Surface Mirror Cleaning for Flight Simulators</p>
         </div>
-        <p class="tagline" style="margin: 0; font-family: 'Space Grotesk', Inter, sans-serif; font-weight: 700; font-size: 36px; line-height: 1.1; letter-spacing: -0.01em">Crystal-clear visuals. Zero risk to your mirrors.</p>
+        <p class="tagline" style="margin: 0; font-family: 'Space Grotesk', Inter, sans-serif; font-weight: 700; font-size: 36px; line-height: 1.1; letter-spacing: -0.01em">Crystal-clear visuals.<br>Zero risk to your mirrors.</p>
         <p style="margin: 0; font-size: 20px; color: #C9D5E1; max-width: 600px">Specialized first surface mirror cleaning for full flight simulators and training devices, rotary- and fixed-wing. Done on-site by Mike, the owner, around your training schedule, with a documented inspection every visit.</p>
         <div style="display: flex; flex-wrap: wrap; gap: 14px">
           <a href="#quote" style="background: #3BB4F2; color: #06131F; text-decoration: none; font-weight: 600; padding: 14px 26px; border-radius: 8px; font-size: 17px; min-height: 48px; box-sizing: border-box; display: inline-flex; align-items: center">Request a quote</a>
           <a href="#process" style="border: 1px solid #3A5069; color: #F2F6FA; text-decoration: none; font-weight: 600; padding: 14px 26px; border-radius: 8px; font-size: 17px; min-height: 48px; box-sizing: border-box; display: inline-flex; align-items: center">How it works</a>
         </div>
-        <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px 28px; font-size: 15px; color: #C9D5E1">
+        <ul class="pills" style="list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; font-size: 14px; color: #C9D5E1">
           <li>Owner-operated · Nationwide</li>
           <li>Former FlightSafety International</li>
           <li>100+ simulators serviced</li>
@@ -62,7 +64,7 @@
         </ul>
       </div>
       <div style="grid-column: span 5; min-width: 0">
-        <div style="background: #122238; border: 1px solid #1E3148; border-radius: 16px; padding: 28px; box-sizing: border-box; display: flex; flex-direction: column; gap: 20px">
+        <div class="glass" style="background: rgba(18,34,56,0.72); border: 1px solid rgba(59,180,242,0.22); border-radius: 16px; padding: 28px; box-sizing: border-box; display: flex; flex-direction: column; gap: 20px">
           <p style="margin: 0; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #A9B8C9; font-weight: 600">Service snapshot</p>
           <div style="display: flex; flex-direction: column; gap: 14px">
             <div style="display: flex; gap: 12px; align-items: flex-start">
@@ -88,7 +90,7 @@
   </section>
 
   <!-- WHY -->
-  <section style="padding: 72px 32px; box-sizing: border-box; background: #0E1C2E; border-top: 1px solid #1E3148; border-bottom: 1px solid #1E3148">
+  <section class="band" style="padding: 72px 32px; box-sizing: border-box; background: #0E1C2E; border-top: 1px solid #1E3148; border-bottom: 1px solid #1E3148">
     <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 36px">
       <div style="display: flex; flex-direction: column; gap: 12px; max-width: 760px">
         <p style="margin: 0; font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase; color: #3BB4F2; font-weight: 600">The risk</p>
@@ -96,15 +98,15 @@
         <p style="margin: 0; font-size: 18px; color: #C9D5E1">A first surface mirror is a precision optic, not a window. The wrong touch changes what your pilots see.</p>
       </div>
       <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px">
-        <article style="background: #122238; border: 1px solid #1E3148; border-radius: 14px; padding: 26px; box-sizing: border-box; display: flex; flex-direction: column; gap: 10px">
+        <article class="card" style="background: #122238; border: 1px solid #1E3148; border-radius: 14px; padding: 26px; box-sizing: border-box; display: flex; flex-direction: column; gap: 10px">
           <h3 style="margin: 0; font-size: 20px; font-weight: 600">The coating is on top</h3>
           <p style="margin: 0; color: #C9D5E1">The reflective layer sits exposed on the surface, not protected behind glass. It scratches far more easily than an ordinary mirror.</p>
         </article>
-        <article style="background: #122238; border: 1px solid #1E3148; border-radius: 14px; padding: 26px; box-sizing: border-box; display: flex; flex-direction: column; gap: 10px">
+        <article class="card" style="background: #122238; border: 1px solid #1E3148; border-radius: 14px; padding: 26px; box-sizing: border-box; display: flex; flex-direction: column; gap: 10px">
           <h3 style="margin: 0; font-size: 20px; font-weight: 600">Wrong chemicals cloud the image</h3>
           <p style="margin: 0; color: #C9D5E1">Ammonia, solvents, abrasives and all-purpose cleaners can haze or strip the coating and degrade the image pilots train on.</p>
         </article>
-        <article style="background: #122238; border: 1px solid #1E3148; border-radius: 14px; padding: 26px; box-sizing: border-box; display: flex; flex-direction: column; gap: 10px">
+        <article class="card" style="background: #122238; border: 1px solid #1E3148; border-radius: 14px; padding: 26px; box-sizing: border-box; display: flex; flex-direction: column; gap: 10px">
           <h3 style="margin: 0; font-size: 20px; font-weight: 600">Dust and haze erode fidelity</h3>
           <p style="margin: 0; color: #C9D5E1">Even light buildup lowers brightness, contrast and clarity. Over time it quietly reduces training value.</p>
         </article>
@@ -125,7 +127,7 @@
       <div style="display: flex; flex-direction: column; gap: 16px">
         <h3 style="margin: 0; font-size: 15px; letter-spacing: 0.12em; text-transform: uppercase; color: #A9B8C9; font-weight: 600">First surface mirror cleaning</h3>
         <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px">
-          <article style="background: #122238; border: 1px solid #1E3148; border-radius: 14px; padding: 26px; box-sizing: border-box; display: flex; flex-direction: column; gap: 14px">
+          <article class="card" style="background: #122238; border: 1px solid #1E3148; border-radius: 14px; padding: 26px; box-sizing: border-box; display: flex; flex-direction: column; gap: 14px">
             <h4 style="margin: 0; font-size: 21px; font-weight: 600">Routine cleaning</h4>
             <p style="margin: 0; color: #C9D5E1">Scheduled maintenance that keeps the image bright, sharp and consistent.</p>
             <ul style="margin: 0; padding-left: 20px; color: #C9D5E1; display: flex; flex-direction: column; gap: 6px">
@@ -134,7 +136,7 @@
               <li>Visual-system inspection and notes</li>
             </ul>
           </article>
-          <article style="background: #122238; border: 1px solid #1E3148; border-radius: 14px; padding: 26px; box-sizing: border-box; display: flex; flex-direction: column; gap: 14px">
+          <article class="card" style="background: #122238; border: 1px solid #1E3148; border-radius: 14px; padding: 26px; box-sizing: border-box; display: flex; flex-direction: column; gap: 14px">
             <h4 style="margin: 0; font-size: 21px; font-weight: 600">Deep restoration</h4>
             <p style="margin: 0; color: #C9D5E1">For heavy haze, buildup, or a device that needs a reset after construction.</p>
             <ul style="margin: 0; padding-left: 20px; color: #C9D5E1; display: flex; flex-direction: column; gap: 6px">
@@ -143,7 +145,7 @@
               <li>Before/after documentation</li>
             </ul>
           </article>
-          <article style="background: #122238; border: 1px solid #1E3148; border-radius: 14px; padding: 26px; box-sizing: border-box; display: flex; flex-direction: column; gap: 14px">
+          <article class="card" style="background: #122238; border: 1px solid #1E3148; border-radius: 14px; padding: 26px; box-sizing: border-box; display: flex; flex-direction: column; gap: 14px">
             <h4 style="margin: 0; font-size: 21px; font-weight: 600">Pre-inspection / audit prep</h4>
             <p style="margin: 0; color: #C9D5E1">Get the visual system looking and performing its best before checks.</p>
             <ul style="margin: 0; padding-left: 20px; color: #C9D5E1; display: flex; flex-direction: column; gap: 6px">
@@ -158,23 +160,23 @@
       <div style="display: flex; flex-direction: column; gap: 16px">
         <h3 style="margin: 0; font-size: 15px; letter-spacing: 0.12em; text-transform: uppercase; color: #A9B8C9; font-weight: 600">Additional visual-system services</h3>
         <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px">
-          <article style="background: #0E1C2E; border: 1px solid #1E3148; border-radius: 14px; padding: 22px; box-sizing: border-box; display: flex; flex-direction: column; gap: 8px">
+          <article class="card" style="background: #0E1C2E; border: 1px solid #1E3148; border-radius: 14px; padding: 22px; box-sizing: border-box; display: flex; flex-direction: column; gap: 8px">
             <h4 style="margin: 0; font-size: 18px; font-weight: 600">Moth remediation</h4>
             <p style="margin: 0; color: #C9D5E1; font-size: 15px">Removal of moth debris, larvae residue and contamination from optics, screens and enclosures.</p>
           </article>
-          <article style="background: #0E1C2E; border: 1px solid #1E3148; border-radius: 14px; padding: 22px; box-sizing: border-box; display: flex; flex-direction: column; gap: 8px">
+          <article class="card" style="background: #0E1C2E; border: 1px solid #1E3148; border-radius: 14px; padding: 22px; box-sizing: border-box; display: flex; flex-direction: column; gap: 8px">
             <h4 style="margin: 0; font-size: 18px; font-weight: 600">Back projection screens</h4>
             <p style="margin: 0; color: #C9D5E1; font-size: 15px">Dust, haze and buildup removal with care for the screen surface, plus a brightness and contrast check.</p>
           </article>
-          <article style="background: #0E1C2E; border: 1px solid #1E3148; border-radius: 14px; padding: 22px; box-sizing: border-box; display: flex; flex-direction: column; gap: 8px">
+          <article class="card" style="background: #0E1C2E; border: 1px solid #1E3148; border-radius: 14px; padding: 22px; box-sizing: border-box; display: flex; flex-direction: column; gap: 8px">
             <h4 style="margin: 0; font-size: 18px; font-weight: 600">Front projection screens</h4>
             <p style="margin: 0; color: #C9D5E1; font-size: 15px">Restores brightness, uniformity and image sharpness without damaging the surface.</p>
           </article>
-          <article style="background: #0E1C2E; border: 1px solid #1E3148; border-radius: 14px; padding: 22px; box-sizing: border-box; display: flex; flex-direction: column; gap: 8px">
+          <article class="card" style="background: #0E1C2E; border: 1px solid #1E3148; border-radius: 14px; padding: 22px; box-sizing: border-box; display: flex; flex-direction: column; gap: 8px">
             <h4 style="margin: 0; font-size: 18px; font-weight: 600">Chin window fold mirrors</h4>
             <p style="margin: 0; color: #C9D5E1; font-size: 15px">Delicate-coating cleaning in the tight-access fold mirrors of helicopter simulators.</p>
           </article>
-          <article style="background: #0E1C2E; border: 1px solid #1E3148; border-radius: 14px; padding: 22px; box-sizing: border-box; display: flex; flex-direction: column; gap: 8px">
+          <article class="card" style="background: #0E1C2E; border: 1px solid #1E3148; border-radius: 14px; padding: 22px; box-sizing: border-box; display: flex; flex-direction: column; gap: 8px">
             <h4 style="margin: 0; font-size: 18px; font-weight: 600">Beam splitter glass</h4>
             <p style="margin: 0; color: #C9D5E1; font-size: 15px">Low-risk cleaning of beam splitter and combiner glass in collimated visual systems.</p>
           </article>
@@ -187,7 +189,7 @@
       </div>
 
       <!-- EVALUATION -->
-      <div style="display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 24px; align-items: center; background: #F2F6FA; color: #0B1726; border-radius: 16px; padding: 36px; box-sizing: border-box">
+      <div class="light-panel" style="display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 24px; align-items: center; background: #F2F6FA; color: #0B1726; border-radius: 16px; padding: 36px; box-sizing: border-box">
         <div style="grid-column: span 8; display: flex; flex-direction: column; gap: 10px; min-width: 0">
           <p style="margin: 0; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #2A6B8F; font-weight: 600">In-person cleaning evaluation</p>
           <h3 style="margin: 0; font-family: 'Space Grotesk', Inter, sans-serif; font-weight: 700; font-size: 30px; line-height: 1.15">Hands-on assessment, clear plan, firm quote.</h3>
@@ -203,7 +205,7 @@
   </section>
 
   <!-- PROCESS -->
-  <section id="process" style="padding: 80px 32px; box-sizing: border-box; background: #0E1C2E; border-top: 1px solid #1E3148; border-bottom: 1px solid #1E3148">
+  <section id="process" class="band" style="padding: 80px 32px; box-sizing: border-box; background: #0E1C2E; border-top: 1px solid #1E3148; border-bottom: 1px solid #1E3148">
     <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 36px">
       <div style="display: flex; flex-direction: column; gap: 12px; max-width: 760px">
         <p style="margin: 0; font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase; color: #3BB4F2; font-weight: 600">Process</p>
@@ -211,22 +213,22 @@
         <p style="margin: 0; font-size: 18px; color: #C9D5E1">Work happens nights, weekends, holidays or between training blocks, whenever it keeps your simulators available.</p>
       </div>
       <ol style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px">
-        <li style="background: #122238; border: 1px solid #1E3148; border-radius: 14px; padding: 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 10px">
+        <li class="card" style="background: #122238; border: 1px solid #1E3148; border-radius: 14px; padding: 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 10px">
           <span style="font-family: 'Space Grotesk', Inter, sans-serif; font-weight: 700; font-size: 28px; color: #3BB4F2">01</span>
           <h3 style="margin: 0; font-size: 19px; font-weight: 600">Consultation &amp; quote</h3>
           <p style="margin: 0; color: #C9D5E1; font-size: 15px">Share photos, mirror count and simulator type for a clear scope and price.</p>
         </li>
-        <li style="background: #122238; border: 1px solid #1E3148; border-radius: 14px; padding: 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 10px">
+        <li class="card" style="background: #122238; border: 1px solid #1E3148; border-radius: 14px; padding: 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 10px">
           <span style="font-family: 'Space Grotesk', Inter, sans-serif; font-weight: 700; font-size: 28px; color: #3BB4F2">02</span>
           <h3 style="margin: 0; font-size: 19px; font-weight: 600">On-site prep</h3>
           <p style="margin: 0; color: #C9D5E1; font-size: 15px">Screens, the collimation area and surrounding surfaces are protected first. Safety before speed.</p>
         </li>
-        <li style="background: #122238; border: 1px solid #1E3148; border-radius: 14px; padding: 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 10px">
+        <li class="card" style="background: #122238; border: 1px solid #1E3148; border-radius: 14px; padding: 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 10px">
           <span style="font-family: 'Space Grotesk', Inter, sans-serif; font-weight: 700; font-size: 28px; color: #3BB4F2">03</span>
           <h3 style="margin: 0; font-size: 19px; font-weight: 600">Careful clean</h3>
           <p style="margin: 0; color: #C9D5E1; font-size: 15px">Lint-free tools and a simulator-approved technique, applied with patience.</p>
         </li>
-        <li style="background: #122238; border: 1px solid #1E3148; border-radius: 14px; padding: 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 10px">
+        <li class="card" style="background: #122238; border: 1px solid #1E3148; border-radius: 14px; padding: 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 10px">
           <span style="font-family: 'Space Grotesk', Inter, sans-serif; font-weight: 700; font-size: 28px; color: #3BB4F2">04</span>
           <h3 style="margin: 0; font-size: 19px; font-weight: 600">Inspection &amp; report</h3>
           <p style="margin: 0; color: #C9D5E1; font-size: 15px">Before/after review, maintenance tips and documentation for your records.</p>
@@ -236,7 +238,7 @@
   </section>
 
   <!-- EXPERIENCE -->
-  <section id="experience" style="padding: 80px 32px; box-sizing: border-box">
+  <section id="experience" class="glow-section" style="position: relative; overflow: hidden; padding: 80px 32px; box-sizing: border-box">
     <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 40px">
       <div style="grid-column: span 6; display: flex; flex-direction: column; gap: 18px; min-width: 0">
         <p style="margin: 0; font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase; color: #3BB4F2; font-weight: 600">Why Clear Sky</p>
@@ -253,19 +255,19 @@
       </div>
       <div style="grid-column: span 6; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; min-width: 0">
         <figure style="margin: 0; display: flex; flex-direction: column; gap: 8px">
-          <img loading="lazy" src="images/ffs-bay.jpg" alt="Mike standing beneath a full flight simulator on its motion base in a training center bay" style="width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 12px; display: block; background: #122238">
+          <img class="photo" loading="lazy" src="images/ffs-bay.jpg" alt="Mike standing beneath a full flight simulator on its motion base in a training center bay" style="width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 12px; display: block; background: #122238">
           <figcaption style="font-size: 14px; color: #A9B8C9">Mike on-site with a full flight simulator</figcaption>
         </figure>
         <figure style="margin: 0; display: flex; flex-direction: column; gap: 8px">
-          <img loading="lazy" src="images/rotary-cockpit.jpg" alt="Helicopter simulator cockpit with a sharp runway scene on the visual system after cleaning" style="width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 12px; display: block; background: #122238">
+          <img class="photo" loading="lazy" src="images/rotary-cockpit.jpg" alt="Helicopter simulator cockpit with a sharp runway scene on the visual system after cleaning" style="width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 12px; display: block; background: #122238">
           <figcaption style="font-size: 14px; color: #A9B8C9">Rotary-wing device, crystal-clear visuals after cleaning</figcaption>
         </figure>
         <figure style="margin: 0; display: flex; flex-direction: column; gap: 8px">
-          <img loading="lazy" src="images/before-after.jpg" alt="Side-by-side: a hazed first surface mirror before cleaning and the same mirror clear afterward" style="width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 12px; display: block; background: #122238">
+          <img class="photo" loading="lazy" src="images/before-after.jpg" alt="Side-by-side: a hazed first surface mirror before cleaning and the same mirror clear afterward" style="width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 12px; display: block; background: #122238">
           <figcaption style="font-size: 14px; color: #A9B8C9">Before and after, first surface mirror restoration</figcaption>
         </figure>
         <figure style="margin: 0; display: flex; flex-direction: column; gap: 8px">
-          <img loading="lazy" src="images/clean-mirror.jpg" alt="Close-up of a clean first surface mirror" style="width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 12px; display: block; background: #122238">
+          <img class="photo" loading="lazy" src="images/clean-mirror.jpg" alt="Looking up from the cockpit at a clean first surface mirror, seams crisp and glare-free" style="width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 12px; display: block; background: #122238">
           <figcaption style="font-size: 14px; color: #A9B8C9">Clean first surface mirror, ready for training</figcaption>
         </figure>
       </div>
@@ -273,7 +275,7 @@
   </section>
 
   <!-- FAQ -->
-  <section id="faq" style="padding: 80px 32px; box-sizing: border-box; background: #0E1C2E; border-top: 1px solid #1E3148; border-bottom: 1px solid #1E3148">
+  <section id="faq" class="band" style="padding: 80px 32px; box-sizing: border-box; background: #0E1C2E; border-top: 1px solid #1E3148; border-bottom: 1px solid #1E3148">
     <div style="max-width: 900px; margin: 0 auto; display: flex; flex-direction: column; gap: 32px">
       <div style="display: flex; flex-direction: column; gap: 12px">
         <p style="margin: 0; font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase; color: #3BB4F2; font-weight: 600">FAQ</p>
@@ -323,7 +325,7 @@
         </address>
       </div>
 
-      <form action="https://formspree.io/f/[YOUR_FORM_ID]" method="POST" style="grid-column: span 7; min-width: 0; background: #F2F6FA; color: #0B1726; border-radius: 16px; padding: 32px; box-sizing: border-box; display: flex; flex-direction: column; gap: 20px">
+      <form class="light-panel" action="https://formspree.io/f/[YOUR_FORM_ID]" method="POST" style="grid-column: span 7; min-width: 0; background: #F2F6FA; color: #0B1726; border-radius: 16px; padding: 32px; box-sizing: border-box; display: flex; flex-direction: column; gap: 20px">
         <div style="display: flex; flex-direction: column; gap: 4px">
           <h3 style="margin: 0; font-family: 'Space Grotesk', Inter, sans-serif; font-weight: 700; font-size: 26px">Request a quote</h3>
           <p style="margin: 0; font-size: 14px; color: #334A62">Fields marked * help prepare an accurate quote.</p>

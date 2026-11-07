@@ -40,6 +40,87 @@ details[open] summary::after { transform: rotate(-135deg); }
 /* Button hover */
 a[href="#quote"]:hover, button[type="submit"]:hover { filter: brightness(1.08); }
 
+/* ---------- Visual polish ---------- */
+
+/* Sticky nav: frosted */
+.site-header { backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); }
+
+/* Hero: simulator photo behind a navy fade */
+.hero-bg {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(90deg, rgba(11,23,38,0.97) 0%, rgba(11,23,38,0.86) 36%, rgba(11,23,38,0.42) 68%, rgba(11,23,38,0.18) 100%),
+    linear-gradient(180deg, rgba(11,23,38,0.35) 0%, rgba(11,23,38,0) 40%, rgba(11,23,38,0.98) 100%),
+    url("images/ffs-bay.jpg");
+  background-size: cover;
+  background-position: center 38%;
+  background-repeat: no-repeat;
+  filter: saturate(0.9);
+}
+.hero-glow {
+  position: absolute; inset: -20% -10% auto auto;
+  width: 60%; height: 120%;
+  background: radial-gradient(ellipse at 70% 30%, rgba(59,180,242,0.22) 0%, rgba(59,180,242,0.06) 35%, rgba(59,180,242,0) 65%);
+  pointer-events: none;
+}
+h1.wordmark { text-shadow: 0 2px 24px rgba(0,0,0,0.45); }
+
+/* Glass card */
+.glass {
+  backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 24px 60px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.06);
+}
+
+/* Trust pills */
+.pills li {
+  padding: 7px 13px;
+  border: 1px solid rgba(59,180,242,0.28);
+  border-radius: 999px;
+  background: rgba(59,180,242,0.08);
+  color: #D5DEE8;
+}
+
+/* Cards: soft top highlight, lift on hover */
+.card {
+  position: relative;
+  background-image: linear-gradient(180deg, rgba(255,255,255,0.035) 0%, rgba(255,255,255,0) 45%) !important;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.04) inset, 0 10px 30px rgba(0,0,0,0.18);
+  transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+}
+.card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(59,180,242,0.45) !important;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.05) inset, 0 18px 40px rgba(0,0,0,0.3), 0 0 0 1px rgba(59,180,242,0.12);
+}
+
+/* Alternating bands: faint gradient instead of flat */
+.band {
+  background: linear-gradient(180deg, #0F1F33 0%, #0E1C2E 100%) !important;
+}
+
+/* Why Clear Sky: ambient glow */
+.glow-section::before {
+  content: "";
+  position: absolute; left: -10%; top: 10%;
+  width: 55%; height: 80%;
+  background: radial-gradient(ellipse at center, rgba(59,180,242,0.14) 0%, rgba(59,180,242,0) 65%);
+  pointer-events: none;
+}
+.glow-section > div { position: relative; }
+
+/* Photos */
+.photo { box-shadow: 0 12px 32px rgba(0,0,0,0.35); transition: transform .3s ease; }
+.photo:hover { transform: scale(1.02); }
+
+/* Light panels: soft shadow so they float */
+.light-panel { box-shadow: 0 30px 70px rgba(0,0,0,0.35); }
+
+/* Primary buttons: subtle gradient + glow */
+a[href="#quote"][style*="background: #3BB4F2"] {
+  background: linear-gradient(180deg, #52C1F6 0%, #3BB4F2 100%) !important;
+  box-shadow: 0 8px 24px rgba(59,180,242,0.28);
+}
+
 /* ---------- Tablet ---------- */
 @media (max-width: 1024px) {
   h1.wordmark { font-size: 76px !important; }
@@ -52,6 +133,13 @@ a[href="#quote"]:hover, button[type="submit"]:hover { filter: brightness(1.08); 
 
 /* ---------- Phone ---------- */
 @media (max-width: 760px) {
+  .hero-bg {
+    background-image:
+      linear-gradient(180deg, rgba(11,23,38,0.55) 0%, rgba(11,23,38,0.92) 45%, rgba(11,23,38,0.99) 100%),
+      url("images/ffs-bay.jpg");
+    background-position: center 20%;
+  }
+  .hero-glow { display: none; }
   h1.wordmark { font-size: 56px !important; letter-spacing: 0.03em !important; }
   .tagline { font-size: 26px !important; }
   h2 { font-size: 30px !important; }
@@ -79,5 +167,7 @@ a[href="#quote"]:hover, button[type="submit"]:hover { filter: brightness(1.08); 
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
+  .card, .photo { transition: none; }
+  .card:hover, .photo:hover { transform: none; }
   details summary::after { transition: none; }
 }

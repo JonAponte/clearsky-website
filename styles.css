@@ -42,7 +42,8 @@ a[href="#quote"]:hover, button[type="submit"]:hover { filter: brightness(1.08); 
 
 /* ---------- Tablet ---------- */
 @media (max-width: 1024px) {
-  h1 { font-size: 48px !important; }
+  h1.wordmark { font-size: 76px !important; }
+  .tagline { font-size: 30px !important; }
   h2 { font-size: 34px !important; }
   /* 4-up grids become 2-up */
   [style*="repeat(4, minmax(0, 1fr))"] { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
@@ -51,7 +52,8 @@ a[href="#quote"]:hover, button[type="submit"]:hover { filter: brightness(1.08); 
 
 /* ---------- Phone ---------- */
 @media (max-width: 760px) {
-  h1 { font-size: 38px !important; }
+  h1.wordmark { font-size: 56px !important; letter-spacing: 0.03em !important; }
+  .tagline { font-size: 26px !important; }
   h2 { font-size: 30px !important; }
   section, header nav, footer { padding-left: 20px !important; padding-right: 20px !important; }
   section { padding-top: 56px !important; padding-bottom: 56px !important; }

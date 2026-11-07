@@ -119,6 +119,10 @@ a[href="#quote"][style*="background: #3BB4F2"] {
 @media (max-width: 1024px) {
   h1.wordmark { font-size: 76px !important; }
   .tagline { font-size: 30px !important; }
+  /* Hero stacks: text first, snapshot card below */
+  .hero > div[style*="grid-template-columns: repeat(12"] { grid-template-columns: minmax(0, 1fr) !important; gap: 36px !important; }
+  .hero [style*="grid-column: span 7"], .hero [style*="grid-column: span 5"] { grid-column: auto !important; }
+  .hero-bg { background-position: center 30%; }
   h2 { font-size: 34px !important; }
   /* 4-up grids become 2-up */
   [style*="repeat(4, minmax(0, 1fr))"] { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }

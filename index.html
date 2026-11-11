@@ -230,7 +230,7 @@
       </div>
       <div style="grid-column: span 4; display: flex; flex-direction: column; gap: 10px; min-width: 0">
         <p style="margin: 0; display: flex; align-items: baseline; gap: 10px"><span style="font-family: 'Space Grotesk', Inter, sans-serif; font-weight: 700; font-size: 34px; line-height: 1">$500</span><span style="font-size: 15px; color: #334A62">per simulator</span></p>
-        <p style="margin: 0; font-size: 15px; color: #334A62">Fully credited toward your total when you book the cleaning.</p>
+        <p style="margin: 0; font-size: 15px; color: #334A62">Covers the on-site inspection, written report and firm quote. Billed separately from the cleaning.</p>
         <a href="#quote" style="background: #0B1726; color: #F2F6FA; text-decoration: none; font-weight: 600; padding: 13px 22px; border-radius: 8px; text-align: center; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center">Book an evaluation</a>
       </div>
     </div>
@@ -326,6 +326,10 @@
           <summary style="cursor: pointer; font-weight: 600; font-size: 18px; min-height: 44px; display: flex; align-items: center">Do you clean other optics?</summary>
           <p style="margin: 12px 0 0; color: #C9D5E1">Yes. Beyond first surface mirrors, Clear Sky cleans beam splitter and combiner glass, back and front projection screens and chin window fold mirrors, and handles moth remediation inside visual-system enclosures.</p>
         </details>
+        <details style="background: #122238; border: 1px solid #1E3148; border-radius: 12px; padding: 18px 22px">
+          <summary style="cursor: pointer; font-weight: 600; font-size: 18px; min-height: 44px; display: flex; align-items: center">Do you clean Mylar mirrors?</summary>
+          <p style="margin: 12px 0 0; color: #C9D5E1">No. Clear Sky services glass mirrors only. Mylar and other film-type mirrors are outside our scope, so please confirm your mirror type before scheduling. Not sure which you have? Call and we'll help you work it out.</p>
+        </details>
       </div>
     </div>
   </section>
@@ -350,6 +354,10 @@
             <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3BB4F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
             <span><span style="display: block; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #A9B8C9">Based in</span><span style="font-weight: 600">Killeen, Texas · Serving all 50 states</span></span>
           </div>
+          <div style="display: flex; gap: 12px; align-items: center; background: #122238; border: 1px solid #1E3148; border-radius: 12px; padding: 14px 18px">
+            <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3BB4F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-6l-2 3h-4l-2-3H2"/><path d="M5.5 5.1 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.5-6.9A2 2 0 0 0 16.8 4H7.2a2 2 0 0 0-1.7 1.1z"/></svg>
+            <span><span style="display: block; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #A9B8C9">Mail</span><span style="font-weight: 600">PO Box 690366, Killeen, Texas 76549</span></span>
+          </div>
         </address>
       </div>
 
@@ -369,7 +377,7 @@
             <label style="display: flex; gap: 10px; align-items: center; background: #FFFFFF; border: 1px solid #C9D5E1; border-radius: 8px; padding: 10px 12px; min-height: 44px; box-sizing: border-box; font-size: 15px"><input type="checkbox" name="services" value="Chin window fold mirror" style="width: 18px; height: 18px">Chin window fold mirror</label>
             <label style="display: flex; gap: 10px; align-items: center; background: #FFFFFF; border: 1px solid #C9D5E1; border-radius: 8px; padding: 10px 12px; min-height: 44px; box-sizing: border-box; font-size: 15px"><input type="checkbox" name="services" value="Beam splitter glass" style="width: 18px; height: 18px">Beam splitter glass</label>
           </div>
-          <label style="display: flex; gap: 10px; align-items: flex-start; background: #E3EEF7; border: 1px solid #9CC9E6; border-radius: 8px; padding: 12px; box-sizing: border-box; font-size: 15px"><input type="checkbox" name="services" value="In-person evaluation ($500 per unit, credited)" style="width: 18px; height: 18px; margin-top: 2px"><span><strong style="font-weight: 600">In-person cleaning evaluation</strong> <span style="color: #334A62">($500 per simulator, fully credited toward the cleaning)</span></span></label>
+          <label style="display: flex; gap: 10px; align-items: flex-start; background: #E3EEF7; border: 1px solid #9CC9E6; border-radius: 8px; padding: 12px; box-sizing: border-box; font-size: 15px"><input type="checkbox" name="services" value="In-person evaluation ($500 per simulator)" style="width: 18px; height: 18px; margin-top: 2px"><span><strong style="font-weight: 600">In-person cleaning evaluation</strong> <span style="color: #334A62">($500 per simulator)</span></span></label>
         </fieldset>
 
         <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px">
@@ -378,6 +386,7 @@
           <label style="display: flex; flex-direction: column; gap: 6px; font-weight: 600; font-size: 15px">Email *<input type="email" name="email" required autocomplete="email" style="border: 1px solid #C9D5E1; border-radius: 8px; padding: 12px; min-height: 44px; box-sizing: border-box; font-weight: 400; background: #FFFFFF; color: #0B1726"></label>
           <label style="display: flex; flex-direction: column; gap: 6px; font-weight: 600; font-size: 15px">Phone<input type="tel" name="phone" autocomplete="tel" style="border: 1px solid #C9D5E1; border-radius: 8px; padding: 12px; min-height: 44px; box-sizing: border-box; font-weight: 400; background: #FFFFFF; color: #0B1726"></label>
           <label style="display: flex; flex-direction: column; gap: 6px; font-weight: 600; font-size: 15px">Simulator type<select name="simulator_type" style="border: 1px solid #C9D5E1; border-radius: 8px; padding: 12px; min-height: 44px; box-sizing: border-box; font-weight: 400; background: #FFFFFF; color: #0B1726"><option>Full Flight Simulator (FFS)</option><option>Flight Training Device (FTD)</option><option>Fixed-base / other</option><option>Multiple devices</option></select></label>
+          <label style="display: flex; flex-direction: column; gap: 6px; font-weight: 600; font-size: 15px">Mirror type *<select name="mirror_type" required style="border: 1px solid #C9D5E1; border-radius: 8px; padding: 12px; min-height: 44px; box-sizing: border-box; font-weight: 400; background: #FFFFFF; color: #0B1726"><option value="">Select one</option><option>Glass</option><option>Mylar / film</option><option>Not sure</option></select></label>
           <label style="display: flex; flex-direction: column; gap: 6px; font-weight: 600; font-size: 15px">Number of mirrors<input type="number" name="mirror_count" min="1" style="border: 1px solid #C9D5E1; border-radius: 8px; padding: 12px; min-height: 44px; box-sizing: border-box; font-weight: 400; background: #FFFFFF; color: #0B1726"></label>
         </div>
         <label style="display: flex; flex-direction: column; gap: 6px; font-weight: 600; font-size: 15px">Message<textarea name="message" rows="4" placeholder="Device details, timing, location, or anything helpful" style="border: 1px solid #C9D5E1; border-radius: 8px; padding: 12px; box-sizing: border-box; font-weight: 400; resize: vertical; background: #FFFFFF; color: #0B1726"></textarea></label>
@@ -392,6 +401,7 @@
     <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; font-size: 14px; color: #A9B8C9">
       <p style="margin: 0"><strong style="color: #F2F6FA; font-weight: 600">Clear Sky</strong> · First surface mirror cleaning for flight simulators · Killeen, TX</p>
       <p style="margin: 0">© 2026 Clear Sky · Owner-operated · Serving all 50 states</p>
+      <p style="margin: 0; flex-basis: 100%; font-size: 13px">Clear Sky is a trade name of Clear Sky Limited Liability Company, a Texas limited liability company · PO Box 690366, Killeen, Texas 76549</p>
     </div>
   </footer>
 </div>

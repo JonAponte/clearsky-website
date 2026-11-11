@@ -15,8 +15,8 @@ No build step. `index.html` + `styles.css` + `images/`. Open `index.html` in a b
 
 ## Launch checklist
 
-- [ ] **Domain** — buy at Cloudflare (Domain Registration). Candidates: clearskysim.com, clearskymirrors.com, clearskyvisuals.com.
-- [ ] **Hosting** — Cloudflare Pages → Create project → Connect to Git → this repo. Framework preset: *None*. Build command: *(empty)*. Output dir: `/`. Then Custom domains → add the domain. Auto-deploys on every push to `main`.
+- [x] **Domain** — clearskymirrors.com, registered at Cloudflare (Nov 11, 2026, auto-renew on).
+- [ ] **Hosting** — GitHub Pages from `main`. The `CNAME` file sets the custom domain; DNS at Cloudflare points to GitHub (records set to DNS only). Then tick Enforce HTTPS in Settings → Pages.
 - [ ] **Email** — Zoho Mail (Forever Free). Add the domain, create `contact@` and `mike@`, add `mike.<lastname>@` as an alias. Paste Zoho's MX / SPF / DKIM records into Cloudflare DNS.
 - [ ] **Quote form** — sign up at formspree.io with `contact@`, create a form, copy its ID, and replace `[YOUR_FORM_ID]` in `index.html` (one place, search for it). Submissions arrive by email.
 - [ ] **Email on the page** — replace `clearskycrew@outlook.com` (two places in `index.html`) with `contact@<domain>`.
@@ -25,6 +25,6 @@ No build step. `index.html` + `styles.css` + `images/`. Open `index.html` in a b
 
 ## Editing
 
-Everything is plain HTML. Text changes: edit `index.html`, commit, push. Cloudflare redeploys in under a minute.
+Everything is plain HTML. Text changes: edit `index.html`, commit, push. GitHub Pages redeploys in a minute or two.
 
 Decisions, removed content and the reasoning behind them are in the ClearSky project change log (Claude project doc `website-change-log.md`).

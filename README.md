@@ -18,7 +18,7 @@ No build step. `index.html` + `styles.css` + `images/`. Open `index.html` in a b
 - [x] **Domain** — clearskymirrors.com, registered at Cloudflare (Nov 11, 2026, auto-renew on).
 - [ ] **Hosting** — GitHub Pages from `main`. The `CNAME` file sets the custom domain; DNS at Cloudflare points to GitHub (records set to DNS only). Then tick Enforce HTTPS in Settings → Pages.
 - [ ] **Email** — Zoho Mail (Forever Free). Add the domain, create `contact@` and `mike@`, add `mike.<lastname>@` as an alias. Paste Zoho's MX / SPF / DKIM records into Cloudflare DNS.
-- [ ] **Quote form** — sign up at formspree.io with `contact@`, create a form, copy its ID, and replace `[YOUR_FORM_ID]` in `index.html` (one place, search for it). Submissions arrive by email.
+- [x] **Quote form** — Formspree form `xyewydwy`, account under `mike@clearskymirrors.com`. Submissions arrive by email.
 - [ ] **Email on the page** — replace `clearskycrew@outlook.com` (two places in `index.html`) with `contact@<domain>`.
 - [x] **Legal name** — footer reads: *Clear Sky is a trade name of Clear Sky Limited Liability Company, a Texas limited liability company.*
 - [ ] **Photos** — the two mirror shots are scans of prints. Swap in originals if Mike finds them (`images/before-after.jpg`, `images/clean-mirror.jpg`).

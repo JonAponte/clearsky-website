@@ -12,6 +12,8 @@ No build step. `index.html` + `styles.css` + `images/`. Open `index.html` in a b
 | `styles.css` | Base styles, focus states, FAQ arrows, and the phone/tablet breakpoints. |
 | `images/` | Mike's four job-site photos. |
 | `favicon.svg` | Tab icon. |
+| `robots.txt`, `sitemap.xml` | Tell search engines the site exists. Update the date in `sitemap.xml` after big content changes. |
+| `CNAME` | Custom domain for GitHub Pages. Do not delete. |
 
 ## Launch checklist
 

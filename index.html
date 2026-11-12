@@ -330,7 +330,7 @@
         </details>
         <details style="background: #122238; border: 1px solid #1E3148; border-radius: 12px; padding: 18px 22px">
           <summary style="cursor: pointer; font-weight: 600; font-size: 18px; min-height: 44px; display: flex; align-items: center">Do you clean Mylar mirrors?</summary>
-          <p style="margin: 12px 0 0; color: #C9D5E1">No. Clear Sky services glass mirrors only. Mylar and other film-type mirrors are outside our scope, so please confirm your mirror type before scheduling. Not sure which you have? Call and we'll help you work it out.</p>
+          <p style="margin: 12px 0 0; color: #C9D5E1">No. Clear Sky specializes in glass first surface mirrors. Mylar and other film-type mirrors need a different process, and we don't service them. Please confirm your mirror type before scheduling. Not sure which you have? Call and we'll help you work it out.</p>
         </details>
       </div>
     </div>
@@ -413,7 +413,7 @@
   var sel = document.getElementById('mirror-type');
   var note = document.getElementById('mirror-note');
   if (!sel || !note) return;
-  var mylar = 'Clear Sky services glass mirrors only, so we can\u2019t quote Mylar or other film-type mirrors. If your facility also has glass-mirror devices, choose Glass and tell us about them in the message.';
+  var mylar = 'Clear Sky specializes in glass mirrors and doesn\u2019t service Mylar or other film-type mirrors. If your facility also has glass-mirror devices, choose Glass and tell us about them in the message.';
   var unsure = 'No problem. Send the request and we\u2019ll help you confirm the mirror type before anything is scheduled.';
   function update() {
     var v = sel.value;
@@ -421,7 +421,7 @@
       note.textContent = mylar;
       note.style.background = '#FDECEC'; note.style.border = '1px solid #E5A3A3'; note.style.color = '#7A1F1F';
       note.hidden = false;
-      sel.setCustomValidity('Clear Sky services glass mirrors only.');
+      sel.setCustomValidity('Clear Sky doesn\u2019t service Mylar or film-type mirrors.');
     } else if (v === 'Not sure') {
       note.textContent = unsure;
       note.style.background = '#E3EEF7'; note.style.border = '1px solid #9CC9E6'; note.style.color = '#0B1726';

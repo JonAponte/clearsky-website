@@ -388,9 +388,10 @@
           <label style="display: flex; flex-direction: column; gap: 6px; font-weight: 600; font-size: 15px">Email *<input type="email" name="email" required autocomplete="email" style="border: 1px solid #C9D5E1; border-radius: 8px; padding: 12px; min-height: 44px; box-sizing: border-box; font-weight: 400; background: #FFFFFF; color: #0B1726"></label>
           <label style="display: flex; flex-direction: column; gap: 6px; font-weight: 600; font-size: 15px">Phone<input type="tel" name="phone" autocomplete="tel" style="border: 1px solid #C9D5E1; border-radius: 8px; padding: 12px; min-height: 44px; box-sizing: border-box; font-weight: 400; background: #FFFFFF; color: #0B1726"></label>
           <label style="display: flex; flex-direction: column; gap: 6px; font-weight: 600; font-size: 15px">Simulator type<select name="simulator_type" style="border: 1px solid #C9D5E1; border-radius: 8px; padding: 12px; min-height: 44px; box-sizing: border-box; font-weight: 400; background: #FFFFFF; color: #0B1726"><option>Full Flight Simulator (FFS)</option><option>Flight Training Device (FTD)</option><option>Fixed-base / other</option><option>Multiple devices</option></select></label>
-          <label style="display: flex; flex-direction: column; gap: 6px; font-weight: 600; font-size: 15px">Mirror type *<select name="mirror_type" required style="border: 1px solid #C9D5E1; border-radius: 8px; padding: 12px; min-height: 44px; box-sizing: border-box; font-weight: 400; background: #FFFFFF; color: #0B1726"><option value="">Select one</option><option>Glass</option><option>Mylar / film</option><option>Not sure</option></select></label>
+          <label style="display: flex; flex-direction: column; gap: 6px; font-weight: 600; font-size: 15px">Mirror type *<select name="mirror_type" id="mirror-type" required aria-describedby="mirror-note" style="border: 1px solid #C9D5E1; border-radius: 8px; padding: 12px; min-height: 44px; box-sizing: border-box; font-weight: 400; background: #FFFFFF; color: #0B1726"><option value="">Select one</option><option>Glass</option><option>Mylar / film</option><option>Not sure</option></select></label>
           <label style="display: flex; flex-direction: column; gap: 6px; font-weight: 600; font-size: 15px">Number of mirrors<input type="number" name="mirror_count" min="1" style="border: 1px solid #C9D5E1; border-radius: 8px; padding: 12px; min-height: 44px; box-sizing: border-box; font-weight: 400; background: #FFFFFF; color: #0B1726"></label>
         </div>
+        <p id="mirror-note" role="status" hidden style="margin: 0; padding: 12px 14px; border-radius: 8px; font-size: 15px; box-sizing: border-box"></p>
         <label style="display: flex; flex-direction: column; gap: 6px; font-weight: 600; font-size: 15px">Message<textarea name="message" rows="4" placeholder="Device details, timing, location, or anything helpful" style="border: 1px solid #C9D5E1; border-radius: 8px; padding: 12px; box-sizing: border-box; font-weight: 400; resize: vertical; background: #FFFFFF; color: #0B1726"></textarea></label>
         <button type="submit" style="background: #0B1726; color: #F2F6FA; border: 0; font-weight: 600; font-size: 17px; padding: 15px 24px; border-radius: 8px; min-height: 48px; cursor: pointer">Request a quote →</button>
         <p style="margin: 0; font-size: 13px; color: #334A62">Your details go directly to Mike. No mailing lists, no sharing.</p>
@@ -407,5 +408,33 @@
     </div>
   </footer>
 </div>
+<script>
+(function () {
+  var sel = document.getElementById('mirror-type');
+  var note = document.getElementById('mirror-note');
+  if (!sel || !note) return;
+  var mylar = 'Clear Sky services glass mirrors only, so we can\u2019t quote Mylar or other film-type mirrors. If your facility also has glass-mirror devices, choose Glass and tell us about them in the message.';
+  var unsure = 'No problem. Send the request and we\u2019ll help you confirm the mirror type before anything is scheduled.';
+  function update() {
+    var v = sel.value;
+    if (v.indexOf('Mylar') === 0) {
+      note.textContent = mylar;
+      note.style.background = '#FDECEC'; note.style.border = '1px solid #E5A3A3'; note.style.color = '#7A1F1F';
+      note.hidden = false;
+      sel.setCustomValidity('Clear Sky services glass mirrors only.');
+    } else if (v === 'Not sure') {
+      note.textContent = unsure;
+      note.style.background = '#E3EEF7'; note.style.border = '1px solid #9CC9E6'; note.style.color = '#0B1726';
+      note.hidden = false;
+      sel.setCustomValidity('');
+    } else {
+      note.hidden = true; note.textContent = '';
+      sel.setCustomValidity('');
+    }
+  }
+  sel.addEventListener('change', update);
+  update();
+})();
+</script>
 </body>
 </html>
